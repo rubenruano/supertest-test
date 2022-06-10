@@ -11,7 +11,7 @@ export default () => {
       expect(body.pagination.limit).toBe(10);
     });
 
-    test("Get one artwork from the collection", async () => {
+    test("Get artwork by id", async () => {
       let response = await getArtworks(200, { limit: 10 });
       let body = JSON.parse(response.response.body);
       const artwork = body.data[0];
