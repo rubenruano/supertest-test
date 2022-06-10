@@ -2,7 +2,7 @@ import getProducts from "../modules/shop/getProducts";
 
 export default () => {
   describe("Shop", () => {
-    test("Get shops", async () => {
+    test("Get products", async () => {
       const response = await getProducts(200, { limit: 10 });
       const body = JSON.parse(response.response.body);
 

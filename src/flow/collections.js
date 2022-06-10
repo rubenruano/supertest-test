@@ -1,5 +1,6 @@
 import getArtworks from "../modules/collections/getArtworks";
-import getArtworkById from "../modules/collections/getCollectionById";
+import getArtworkById from "../modules/collections/getArtworkById";
+import getArtworkSearch from "../modules/collections/getArtworkSearch";
 
 export default () => {
   describe("Artworks collection", () => {
@@ -19,6 +20,13 @@ export default () => {
       response = await getArtworkById(200, { id: artwork.id });
       body = JSON.parse(response.response.body);
       expect(body.data.id).toBe(artworkId);
+    });
+
+    test("Search artwork from the collection", async () => {
+      const response = await getArtworkSearch(200, { q: "Cats" });
+      let body = JSON.parse(response.response.body);
+
+      expect(body.data.length).toBeGreaterThan(0);
     });
   });
 };

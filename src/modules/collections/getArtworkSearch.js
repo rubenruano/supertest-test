@@ -1,11 +1,11 @@
 const request = require("supertest");
 
 export default async (expectedStatus, params) => {
-  const url = "/products";
+  const url = "/artworks/search";
 
   const res = await request(process.env.API_ENDPOINT)
     .get(url)
-    .query({ limit: params.limit })
+    .query({ q: params.q })
     .expect(expectedStatus);
 
   return {
