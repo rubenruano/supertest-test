@@ -1,0 +1,71 @@
+{
+  "name": "automation-microservice-template",
+  "version": "1.0.0",
+  "description": "Template for microservices automation",
+  "scripts": {
+    "test": "jest -i --detectOpenHandles",
+    "test-admin": "npm run test admin.spec.js --detectOpenHandles",
+    "test-planing": "npm run test planing.spec.js  --detectOpenHandles",
+    "test-responsibleSourcing": "npm run test responsableSourcing.spec.js --detectOpenHandles",
+    "lint": "eslint ."
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.18.2",
+    "eslint": "^8.17.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-jest": "^26.5.3",
+    "eslint-plugin-prettier": "^4.0.0",
+    "jest": "^28.1.1",
+    "jsonlint": "^1.6.3",
+    "nodemon": "^2.0.16",
+    "prettier-eslint": "^15.0.1",
+    "supertest": "^6.2.3"
+  },
+  "prettier": {
+    "singleQuote": false,
+    "trailingComma": "none",
+    "arrowParens": "avoid",
+    "endOfLine": "auto"
+  },
+  "eslintConfig": {
+    "root": true,
+    "extends": [
+      "plugin:prettier/recommended",
+      "eslint:recommended"
+    ],
+    "plugins": [
+      "prettier",
+      "jest"
+    ],
+    "env": {
+      "es6": true,
+      "jest/globals": true,
+      "node": true
+    },
+    "parserOptions": {
+      "ecmaVersion": 2018,
+      "sourceType": "module"
+    },
+    "rules": {
+      "prettier/prettier": "error",
+      "standard/array-bracket-even-spacing": "off",
+      "standard/computed-property-even-spacing": "off",
+      "standard/object-curly-even-spacing": "off",
+      "no-extra-semi": "error",
+      "no-mixed-spaces-and-tabs": "off",
+      "no-useless-return": "warn",
+      "arrow-parens": [
+        2,
+        "as-needed"
+      ],
+      "comma-dangle": [
+        "error",
+        "never"
+      ]
+    }
+  },
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "prettier": "^2.6.2"
+  }
+}
