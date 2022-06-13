@@ -81,4 +81,10 @@ VERSION = {num}
 
 [API List](https://github.com/public-apis/public-apis)
 [Art Institute of Chicago](https://api.artic.edu/docs/#quick-start)
-[AniAPI Docs](https://aniapi.com/docs/)
+
+
+https://calendarific.com/api-documentation
+https://calendarific.com/account
+API Key 455b5a72c3bf47760106a8d34a52c49bf690cb19
+
+https://calendarific.com/api/v2/holidays?api_key=455b5a72c3bf47760106a8d34a52c49bf690cb19&country=AR&year=2022
