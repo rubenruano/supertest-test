@@ -6,9 +6,9 @@ export default () => {
   describe("Artworks collection", () => {
     test("Get artworks", async () => {
       const response = await getArtworks(200, { limit: 10 });
-      const body = JSON.parse(response.response.body);
-      expect(body.pagination.current_page).toBe(1);
-      expect(body.pagination.limit).toBe(10);
+      const { pagination } = JSON.parse(response.response.body);
+      expect(pagination.current_page).toBe(1);
+      expect(pagination.limit).toBe(10);
     });
 
     test("Get artwork by id", async () => {

@@ -79,4 +79,6 @@ HOSTNAME = {url}
 VERSION = {num}
 ```
 
+[API List](https://github.com/public-apis/public-apis)
 [Art Institute of Chicago](https://api.artic.edu/docs/#quick-start)
+[AniAPI Docs](https://aniapi.com/docs/)
